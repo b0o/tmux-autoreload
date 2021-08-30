@@ -11,9 +11,9 @@ it on change.
 
 ### Tmux Plugin Manager
 
+Add the following line to your `tmux.conf`:
+
 ```sh
-### With Tmux Plugin Manager (https://github.com/tmux-plugins/tpm)
-# Add the following line to your tmux.conf:
 set-option -g @plugin 'b0o/tmux-autoreload'
 ```
 
@@ -21,10 +21,15 @@ Then, inside tmux, press `prefix + I` (capital `i`, as in Install) to fetch the 
 
 ### Manual Install
 
+Clone the repo to your desired location:
+
 ```sh
-# Clone the repo to your desired location
-$ git clone https://github.com/b0o/tmux-autoreload /path/to/tmux-autoreload
-# Add the following line to your tmux.conf:
+git clone https://github.com/b0o/tmux-autoreload /path/to/tmux-autoreload
+```
+
+Then, add the following line to your `tmux.conf`:
+
+```sh
 run-shell "/path/to/tmux-autoreload/tmux-autoreload.tmux"
 ```
 
