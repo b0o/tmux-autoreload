@@ -5,12 +5,23 @@ it on change.
 
 ## Install
 
+### Dependencies
+
+- [entr](https://github.com/eradman/entr)
+
+### Tmux Plugin Manager
+
 ```sh
 ### With Tmux Plugin Manager (https://github.com/tmux-plugins/tpm)
 # Add the following line to your tmux.conf:
 set-option -g @plugin 'b0o/tmux-autoreload'
+```
 
-### Or Manually Install
+Then, inside tmux, press `prefix + I` (capital `i`, as in Install) to fetch the plugin.
+
+### Manual Install
+
+```sh
 # Clone the repo to your desired location
 $ git clone https://github.com/b0o/tmux-autoreload /path/to/tmux-autoreload
 # Add the following line to your tmux.conf:
@@ -19,8 +30,8 @@ run-shell "/path/to/tmux-autoreload/tmux-autoreload.tmux"
 
 ## Usage
 
-That's it! When you edit and write your `tmux.conf`, tmux-autoreload will
-tell tmux to source it.
+Once you've installed tmux-autoreload, that's it! When you edit and write your
+`tmux.conf`, tmux-autoreload will tell tmux to source it.
 
 ### Advanced Usage
 
