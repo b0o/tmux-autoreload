@@ -79,7 +79,7 @@ function display_message() {
   # `tmux display-message -c` is broken in v3.2a
   # https://github.com/tmux/tmux/issues/2737#issuecomment-898861216
   if [[ "$(tmux display-message -p "#{version}")" == "3.2a" ]]; then
-    tmux display-message "$*"
+    tmux display-message "$@"
   else
     while read -r client; do
       tmux display-message -c "$client" "$@"
@@ -155,7 +155,7 @@ function main() {
   local -i entr_pid
 
   if get_instance; then
-    exit 0
+    return 0
   fi
 
   local -a config_files
@@ -170,6 +170,7 @@ function main() {
       fi
       tmux set-option -gu @tmux-autoreload-pid &
     } || true
+    return $code
   }
 
   trap 'onexit' EXIT
