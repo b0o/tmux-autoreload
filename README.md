@@ -9,7 +9,7 @@ it on change.
 
 - [entr](https://github.com/eradman/entr)
 
-### Tmux Plugin Manager
+### TPM (Tmux Plugin Manager)
 
 Add the following line to your `tmux.conf`:
 
