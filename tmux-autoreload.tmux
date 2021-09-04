@@ -176,7 +176,13 @@ function main() {
   trap 'onexit' EXIT
   tmux set-option -g @tmux-autoreload-pid $$
 
-  entr -np tmux source "${config_files[@]}" ';' run-shell "$self -m 'Reloaded tmux.conf'" 2>&1 <<< "${config_files[@]}" &
+  entr -np sh -c '
+    if msg="$(tmux source "$1")"; then
+      "$0" -m "Reloaded tmux.conf"
+    else
+      "$0" -M "#[fg=white,bg=red,bold]ERROR: $msg"
+    fi
+  ' "$self" /_ <<< "${config_files[@]}" &
   entr_pid=$!
   wait
 }
