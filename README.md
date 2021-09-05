@@ -11,13 +11,13 @@ it on change.
 
 ### TPM (Tmux Plugin Manager)
 
-Add the following line to your `tmux.conf`:
+To install with [TPM](https://github.com/tmux-plugins/tpm), add the following line to your `tmux.conf`:
 
 ```sh
 set-option -g @plugin 'b0o/tmux-autoreload'
 ```
 
-Then, inside tmux, press `prefix + I` (capital `i`, as in Install) to fetch the plugin.
+Then, restart tmux or manually source your config file, then press your TPM install key binding (defaults to `prefix + I`) to install and start the plug-in.
 
 ### Manual Install
 
@@ -56,15 +56,6 @@ Options
   -s      Show status of tmux-autoreload.
   -m MSG  Display MSG on all clients.
   -M MSG  Display MSG on all clients (wait for keypress).
-
-To enable tmux-autoreload, install TPM (https://github.com/tmux-plugins/tpm) and add the
-following line to the end of your tmux configuration file:
-
-    set-option -g @plugin 'b0o/tmux-autoreload'
-
-If you do not use a plugin manager, you can run tmux-autoreload directly:
-
-    run-shell "/home/maddy/proj/tmux-autoreload/tmux-autoreload.tmux"
 
 ```
 
