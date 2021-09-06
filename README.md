@@ -17,7 +17,7 @@ To install with [TPM](https://github.com/tmux-plugins/tpm), add the following li
 set-option -g @plugin 'b0o/tmux-autoreload'
 ```
 
-Then, restart tmux or manually source your config file. Finally, press your TPM install key binding (defaults to `prefix + I`) to install and start the plug-in.
+Then, restart tmux or manually source your config file. Finally, press your TPM install keybinding (defaults to `prefix + I`) to install and start the plugin.
 
 ### Manual Install
 
