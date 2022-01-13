@@ -18,7 +18,7 @@ following line to the end of your tmux configuration file:
 set-option -g @plugin 'b0o/tmux-autoreload'
 ```
 
-Then, inside tmux, press `prefix + I` (capital `i`, as in Install) to fetch the plugin.
+Then, inside tmux, press `prefix + I` to fetch the plugin.
 
 If you don't use a plugin manager, git clone tmux-autoreload to the location of your
 choice and run it directly:
