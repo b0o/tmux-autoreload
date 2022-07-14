@@ -248,6 +248,11 @@ function main() {
 
   tmux set-option -g "@$name-pid" $$
 
+  # force cleanup
+  for KILLPID in `ps ax | grep "entr.*tmux-autoreload" | grep -iv "grep" | awk '{print $1;}'`; do
+    kill $KILLPID;
+  done
+
   # shellcheck disable=2016
   entr -np sh -c '"$0" -r "$1"' "$self" /_ <<<"$(printf '%s\n' "$(get_base_configs)" "$(get_user_configs)")" &
   # shellcheck disable=2064
