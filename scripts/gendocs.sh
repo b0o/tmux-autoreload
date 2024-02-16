@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright (C) 2020-2021 Maddison Hellstrom <https://github.com/b0o>, MIT License.
+# Copyright (C) 2023-2024 Maddison Hellstrom <https://github.com/b0o>, MIT License.
 
 set -Eeuo pipefail
 if [[ ${BASH_VERSINFO[0]} -ge 5 || (${BASH_VERSINFO[0]} -eq 4 && ${BASH_VERSINFO[1]} -ge 4) ]]; then
