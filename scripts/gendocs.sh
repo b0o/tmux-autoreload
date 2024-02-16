@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Copyright (C) 2023-2024 Maddison Hellstrom <https://github.com/b0o>, MIT License.
 
